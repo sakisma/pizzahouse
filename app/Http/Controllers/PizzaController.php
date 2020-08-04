@@ -12,7 +12,8 @@ class PizzaController extends Controller
 	{
 		$pizzas = Pizza::all();
 		
-		return view('index', ['pizzas' => $pizzas]);
+        return view('index', compact('pizzas'));
+// 		return view('index', ['pizzas' => $pizzas]);
 	}
 
 	public function show($id) {
